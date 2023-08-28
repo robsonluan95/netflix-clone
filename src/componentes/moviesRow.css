@@ -1,0 +1,61 @@
+.movieRow{
+    margin-bottom: 30px;
+}
+.movieRow h2{
+    margin: 0px 0px 0px 30px;
+}
+.movieRow--listarea{
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+.movieRow--list{
+    transition: all 0.5s;
+}
+.movieRow--item{
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+
+.movieRow--item img{
+    width: 100%;
+    transform: scale(0.9);/* diminuir a escala para a nimaçao ficar natural e nao mudar a margem*/
+    transition: all ease 0.2s;/* da mais fluidez a animação */
+    
+}
+.movieRow--item img:hover{  
+    transform: scale(1);
+}
+.navegador--apos,
+.navegador--antes{
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    background-color: rgba(0,0,0, 0.6); 
+    z-index: 99;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+}
+.navegador--apos{
+    right: 0;
+}
+.navegador--antes{
+    left: 0;
+}
+
+.movieRow:hover .navegador--antes,
+.movieRow:hover .navegador--apos{
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+@media (max-width:760px){
+    .navegador--antes,
+    .navegador--apos{
+        opacity: 1;
+    }
+}
