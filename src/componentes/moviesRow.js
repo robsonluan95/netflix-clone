@@ -1,6 +1,6 @@
 import React,{useState} from "react";
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import './moviesRow.css'
 
@@ -37,11 +37,11 @@ export default ({title,itens})=>{
         <div className="movieRow">
             <h2>{title}</h2>
             <div className="navegador--antes" onClick={moverAntes} >
-                <NavigateBeforeIcon style={{fontSize:50}}/>
+                <ArrowBackIosIcon style={{fontSize:50}}/>
 
             </div>
             <div className="navegador--apos" onClick={moverApos}>
-                <NavigateNextIcon style={{fontSize:50}}/> 
+                 <ArrowForwardIosIcon style={{fontSize:50}}/> 
             </div>
             <div className="movieRow--listarea"> 
                 <div className="movieRow--list" style={{
